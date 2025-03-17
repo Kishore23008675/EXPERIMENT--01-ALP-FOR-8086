@@ -1,7 +1,7 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+Name : kishore A
+
+Roll no: 212223110022
 
 
 
@@ -78,25 +78,91 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 ## Programs for arithmetic  operations
 
 ## Addition  of 8 bit ALP 
+```org 100h
+                   
+MOV CL,00H
+MOV AL,[4200H]
+MOV BL,[4201H]
+ADD AL,BL
+JNC L
+INC CL
+L:MOV [4202H],AL
+  MOV [4203H],CL
+ ret
+```
+## Output
+![Screenshot 2025-03-03 143157](https://github.com/user-attachments/assets/2d15f9ba-515f-4f39-a68d-e54e5921cfc0)
 
+## Subtraction   of 8 bit numbers  ALP
+```
+org 100h
 
+MOV AL,[4300H]
+MOV BL,[4301H]
+SUB AL,BL
+MOV [4302H],AL
 
-## Output  
+ret
+```
  
-## Subtraction   of 8 bit numbers  ALP 
- 
-## Output  
-## Multiplication alp 
- ## Output  
+## Output 
+![Screenshot 2025-03-03 142338](https://github.com/user-attachments/assets/202d1a87-18d2-44de-a371-e4e2e36d581c)
 
+## Multiplication alp
+```
+org 100h
+
+MOV AL,[4400H]
+MOV BL,[4401H]
+MUL BL    
+MOV [4402H],AX
+
+ret
+```
+## Output  
+![Screenshot 2025-03-03 143633](https://github.com/user-attachments/assets/cf9fcdb3-9c5b-4e19-849e-706ff221cfdf)
 
 ## Division alp 
+```
+org 100h
 
+MOV AL,[4500H]
+MOV BL,[4501H]
+DIV BL
+MOV [4502H],AL
+MOV [4503H],AH
+ret
+
+```
 ## Output  
+![Screenshot 2025-03-03 144548](https://github.com/user-attachments/assets/e3e33c5d-3ccb-4a07-a2d4-d56182994916)
 
+## Logical Operation alp
+
+```
+org 100h
+
+MOV AX,0A32H
+MOV BX,0B31H
+MOV SI,5000H
+OR AX,BX
+MOV [SI], AX
+MOV AX,0A32H
+AND AX,BX
+MOV [SI+2], AX
+XOR AX,BX
+MOV [SI+4], AX
+MOV AX,0A32H
+NOT AX
+MOV [SI+6], AX
+
+ret
+```
+## Output
+![Screenshot 2025-03-10 144314](https://github.com/user-attachments/assets/584f7760-f7d5-4f8a-8396-cbfc24da243b)
 
 ## Result :
- 
+ ALP on fundamental arithmetic and logical operations is thus written and executed
 
 
 
